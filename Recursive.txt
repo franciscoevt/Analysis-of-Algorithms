@@ -1,0 +1,17 @@
+#include <iostream>
+
+long long fibonacciRecursivo(int n) {
+    
+    if (n <= 0) return 1; // x(0) = 1 [cite: 25]
+    if (n == 1) return 2; // x(1) = 2 [cite: 26]
+    
+    return fibonacciRecursivo(n - 2) + fibonacciRecursivo(n - 1);
+}
+
+int main() {
+    int n;
+    std::cout << "Insert the value of n: ";
+    std::cin >> n;
+    std::cout << "Fibonacci(" << n << ") = " << fibonacciRecursivo(n) << std::endl;
+    return 0;
+}
